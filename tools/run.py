@@ -5,6 +5,7 @@ import shutil
 import subprocess
 import sys
 from os import path
+from time import sleep
 
 SCRIPT_PATH = path.dirname(path.abspath(__file__))
 
@@ -40,3 +41,5 @@ if __name__ == '__main__':
     run_kafka_server();
     # Run Exchange Server.
     run_exchange_server();
+    while(True) :
+        sleep(1);
